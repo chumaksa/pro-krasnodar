@@ -1,20 +1,18 @@
-import { getUniqCollection, hasCheckedElement } from "./collections.js";
-import { objects, types, cities, allCheckboxes, changeButton } from "./constElements.js";
-changeButton.addEventListener('click', () => {
-    const renderList = getUniqCollection(types, cities);
+import { getUniqCollection, hasCheckedElement, handleChangeButtonClick } from "./collections.js";
+import { objects, types, cities, allCheckboxes, changeButton, filter, footerArrow, resetButton, filterLink } from "./constElements.js";
 
-    if (renderList.length === 0 && !hasCheckedElement(allCheckboxes)) {
-        objects.forEach((object) => {
-            object.classList.remove('object_hidden');
-        })
-    } else {
-        objects.forEach((object) => {
-            if (!renderList.includes(object)) {
-                object.classList.add('object_hidden');
-            } else {
-                object.classList.remove('object_hidden');
-            }
-        })
-    }
-});
+changeButton.addEventListener('click', handleChangeButtonClick);
+
+filterLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    footerArrow.classList.toggle('filter-link__arrow_rotate');
+    filter.classList.toggle('filter_active');
+})
+
+resetButton.addEventListener('click', () => {
+    allCheckboxes.forEach((item) => {
+        item.checked = false;
+    })
+    handleChangeButtonClick();
+})
 

@@ -1,0 +1,21 @@
+.filter-link {
+  font-size: 2rem;
+  font-weight: bolder;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: initial;
+  margin-bottom: 2rem;
+  background: url("../../src/images/icons/filter.png") no-repeat left center;
+  padding-left: 3rem;
+  width: max-content;
+  &__arrow {
+    margin-left: 5px;
+    font-size: 1.9rem;
+    color: var(--color-primary);
+    &_rotate {
+      display: inline-block;
+      transform: rotate(180deg);
+    }
+  }
+}

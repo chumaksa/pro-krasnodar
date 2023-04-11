@@ -11,9 +11,10 @@
 <body>
 <main class="container">
     <h1>Галерея объектов</h1>
+    <a class="filter-link" href="#">Фильтр объектов <span class="filter-link__arrow">&#9660;</span></a>
     <div class="filter">
         <fieldset>
-            <legend>Объекты</legend>
+            <legend><b>Объекты</b></legend>
             <label for="living">
                 Жилые
                 <input type="checkbox" name="type" id="living">
@@ -28,7 +29,7 @@
             </label>
         </fieldset>
         <fieldset>
-            <legend>Города</legend>
+            <legend><b>Города</b></legend>
             <label for="ekaterinburg">
                 Екатеринбург
                 <input type="checkbox" name="city" id="ekaterinburg">
@@ -42,7 +43,10 @@
                 <input type="checkbox" name="city" id="novosibirsk">
             </label>
         </fieldset>
-        <button id="change" type="button">Применить</button>
+        <div>
+            <button id="change" class="button button_primary" type="button">Применить</button>
+            <button id="reset" class="button button_outline" type="button">Сбросить</button>
+        </div>
     </div>
     <div class="grid">
         <a class="object" href="#" data-type="living" data-city="omsk">
