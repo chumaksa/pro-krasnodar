@@ -1,0 +1,10 @@
+:root {
+  --main-font-size: 10px;
+  --main-font-family: Arial, Helvetica, sans-serif;
+}
+
+$breakpoints: (
+        'large': (max-width: 1319px),
+        'medium': (max-width: 991px),
+        'small': (max-width: 499px),
+);
