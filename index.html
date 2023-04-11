@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/styles/main.scss">
@@ -12,57 +11,54 @@
 <body>
 <main class="container">
     <h1>Галерея объектов</h1>
+    <div class="filter">
+        <fieldset>
+            <legend>Объекты</legend>
+            <label for="living">
+                Жилые
+                <input type="checkbox" name="type" id="living">
+            </label>
+            <label for="municipal">
+                Муниципальные
+                <input type="checkbox" name="type" id="municipal">
+            </label>
+            <label for="commercial">
+                Коммерческие
+                <input type="checkbox" name="type" id="commercial">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Города</legend>
+            <label for="ekaterinburg">
+                Екатеринбург
+                <input type="checkbox" name="city" id="ekaterinburg">
+            </label>
+            <label for="omsk">
+                Омск
+                <input type="checkbox" name="city" id="omsk">
+            </label>
+            <label for="novosibirsk">
+                Новосибирск
+                <input type="checkbox" name="city" id="novosibirsk">
+            </label>
+        </fieldset>
+        <button id="change" type="button">Применить</button>
+    </div>
     <div class="grid">
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
+        <a class="object" href="#" data-type="living" data-city="omsk">
+            <img class="object__thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
         </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
+        <a class="object" href="#" data-type="living" data-city="novosibirsk">
+            <img class="object__thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
         </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
+        <a class="object" href="#" data-type="municipal" data-city="omsk">
+            <img class="object__thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
         </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
-        </a>
-        <a class="object" href="#">
-            <img class="object_thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
+        <a class="object" href="#" data-type="commercial" data-city="ekaterinburg">
+            <img class="object__thumbnail" src="src/images/objects/novosibirsk.jpg" alt="#">
         </a>
     </div>
 </main>
-<script src="src/scripts/main.js"></script>
+<script type="module" src="src/scripts/main.js"></script>
 </body>
 </html>
