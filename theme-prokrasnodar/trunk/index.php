@@ -1,16 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAABMLAAATCwAAAAAAAAAAAADjswBp47MAaeOzADzjswAt47MAaeOzAGnjswBm47MAZuOzAG3jswBr47MAa+OzAC0AAAAAAAAAAAAAAAAAAAAA47MAaeOzAGnjswA847MALeOzAGnjswBp47MAZuOzAGbjswBm47MAYeOzAB7jswBA47MAb+OzAAcAAAAAAAAAAOOzAGnjswBp47MAPOOzAC3jswBp47MAaeOzADPjswAz47MAK+OzAA7jswBT47MAcOOzABXjswB/47MABgAAAADjswBp47MAaeOzADzjswAt47MAaeOzAGnjswAz47MAM+OzADvjswBk47MAbeOzABbjswB747MAGeOzAHMAAAAA47MAaeOzAGnjswA847MALeOzAGnjswBp47MAZuOzAGbjswBm47MAZeOzABjjswB/47MAGeOzAHTjswBE47MAMuOzAGnjswBp47MAPOOzAC3jswBp47MAaeOzAGbjswBm47MAVOOzABXjswB747MAF+OzAG/jswBV47MAHuOzAHXjswBp47MAaeOzADzjswAt47MAaeOzAGkAAAAAAAAAAOOzABXjswCA47MAFeOzAGjjswBp47MAD+OzAGPjswBu47MAaeOzAGnjswA847MALeOzAGnjswBpAAAAAAAAAAAAAAAA47MAEeOzAFbjswBr47MAPuOzAC/jswBp47MAbuOzAGrjswBq47MALuOzAD/jswBr47MAVeOzABIAAAAAAAAAAOOzABHjswBV47MAa+OzAD7jswAu47MAauOzAGnjswBv47MAYuOzABPjswBm47MAaOOzABbjswB/47MAE+OzABfjswB847MAFuOzAGfjswBr47MAE+OzAGHjswBt47MAc+OzABzjswBX47MAbuOzABfjswCF47MAHOOzAFnjswBT47MAHOOzAIXjswAW47MAcOOzAFfjswAc47MAc+OzADDjswBO47MAcuOzABnjswB847MAFeOzAGfjswBo47MAZ+OzAGfjswAV47MAfOOzABnjswB047MATeOzADAAAAAA47MAc+OzABjjswCB47MAG+OzAG7jswBm47MAPeOzAD3jswBm47MAbuOzABvjswCA47MAGOOzAHMAAAAAAAAAAOOzAAbjswB847MAGuOzAHLjswBU47MADeOzACrjswAq47MADeOzAFPjswBv47MAGuOzAHzjswAGAAAAAAAAAAAAAAAA47MABuOzAHDjswBM47MAHuOzAGTjswBn47MAZ+OzAGDjswAc47MATeOzAHHjswAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA47MAKuOzAHTjswBq47MAaOOzAGjjswBq47MAdOOzADAAAAAAAAAAAAAAAAAAAAAAAA8AAAADAAAAAQAAAAEAAAAAAAAAAP//AwAAAAOAAAABgIghAAAAAAAAAAAAAP//gAEAAIABAADAA4wc8A8AAA==" type="image/x-icon">
-    
-    <title>Pro-krasnodar</title>
-  <script type="module" crossorigin src="/assets/index-a8978f0a.js"></script>
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/index-0daf8438.css">
-</head>
-<body>
+<?php get_header(); ?>
+
 <main class="container">
     <h1>Галерея объектов</h1>
     <a class="filter-link" href="#">Фильтр объектов <span class="filter-link__arrow">&#9660;</span></a>
@@ -51,32 +40,20 @@
         </div>
     </div>
     <div class="grid">
-        <a class="object" href="#" data-type="living" data-city="omsk">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
+
+    <?php
+    $query = new WP_Query(array( 'category_name' => 'objects' ));
+    while ($query->have_posts()) : $query->the_post();
+        $thumbnail_id = get_post_thumbnail_id( $post->ID );
+        $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+        $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        ?>
+        <a class="object" href="<?php the_permalink(); ?>" data-type="<?php the_field('objects_type'); ?>" data-city="<?php the_field('objects_city'); ?>">
+            <img class="object__thumbnail" src="<?php echo $thumbnail_url ?>" alt="<?php echo $thumbnail_alt ?>">
         </a>
-        <a class="object" href="#" data-type="living" data-city="novosibirsk">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
-        <a class="object" href="#" data-type="municipal" data-city="omsk">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
-        <a class="object" href="#" data-type="commercial" data-city="ekaterinburg">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
-        <a class="object" href="#" data-type="living" data-city="omsk">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
-        <a class="object" href="#" data-type="living" data-city="novosibirsk">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
-        <a class="object" href="#" data-type="municipal" data-city="omsk">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
-        <a class="object" href="#" data-type="commercial" data-city="ekaterinburg">
-            <img class="object__thumbnail" src="/assets/novosibirsk-8d7d5127.jpg" alt="#">
-        </a>
+    <?php endwhile; wp_reset_postdata(); ?>
+
     </div>
 </main>
 
-</body>
-</html>
+<?php get_footer(); ?>

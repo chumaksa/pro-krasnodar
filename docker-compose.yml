@@ -8,8 +8,9 @@ services:
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./wp-app:/var/www/html # Full wordpress project
-      #- ./plugin-name/trunk/:/var/www/html/wp-content/plugins/plugin-name # Plugin development
-      - ./theme-prokrasnodar/trunk/:/var/www/html/wp-content/themes/prokrasnodar # Theme development
+      - ./plugin-advanced-custom-fields/trunk/advanced-custom-fields:/var/www/html/wp-content/plugins/advanced-custom-fields # Plugin
+      - ./theme-prokrasnodar/trunk/:/var/www/html/wp-content/themes/prokrasnodar # Theme
+      - ./uploads/trunk/:/var/www/html/wp-content/uploads # Uploads
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: "${DB_NAME}"

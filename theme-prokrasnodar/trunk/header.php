@@ -1,0 +1,13 @@
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAABMLAAATCwAAAAAAAAAAAADjswBp47MAaeOzADzjswAt47MAaeOzAGnjswBm47MAZuOzAG3jswBr47MAa+OzAC0AAAAAAAAAAAAAAAAAAAAA47MAaeOzAGnjswA847MALeOzAGnjswBp47MAZuOzAGbjswBm47MAYeOzAB7jswBA47MAb+OzAAcAAAAAAAAAAOOzAGnjswBp47MAPOOzAC3jswBp47MAaeOzADPjswAz47MAK+OzAA7jswBT47MAcOOzABXjswB/47MABgAAAADjswBp47MAaeOzADzjswAt47MAaeOzAGnjswAz47MAM+OzADvjswBk47MAbeOzABbjswB747MAGeOzAHMAAAAA47MAaeOzAGnjswA847MALeOzAGnjswBp47MAZuOzAGbjswBm47MAZeOzABjjswB/47MAGeOzAHTjswBE47MAMuOzAGnjswBp47MAPOOzAC3jswBp47MAaeOzAGbjswBm47MAVOOzABXjswB747MAF+OzAG/jswBV47MAHuOzAHXjswBp47MAaeOzADzjswAt47MAaeOzAGkAAAAAAAAAAOOzABXjswCA47MAFeOzAGjjswBp47MAD+OzAGPjswBu47MAaeOzAGnjswA847MALeOzAGnjswBpAAAAAAAAAAAAAAAA47MAEeOzAFbjswBr47MAPuOzAC/jswBp47MAbuOzAGrjswBq47MALuOzAD/jswBr47MAVeOzABIAAAAAAAAAAOOzABHjswBV47MAa+OzAD7jswAu47MAauOzAGnjswBv47MAYuOzABPjswBm47MAaOOzABbjswB/47MAE+OzABfjswB847MAFuOzAGfjswBr47MAE+OzAGHjswBt47MAc+OzABzjswBX47MAbuOzABfjswCF47MAHOOzAFnjswBT47MAHOOzAIXjswAW47MAcOOzAFfjswAc47MAc+OzADDjswBO47MAcuOzABnjswB847MAFeOzAGfjswBo47MAZ+OzAGfjswAV47MAfOOzABnjswB047MATeOzADAAAAAA47MAc+OzABjjswCB47MAG+OzAG7jswBm47MAPeOzAD3jswBm47MAbuOzABvjswCA47MAGOOzAHMAAAAAAAAAAOOzAAbjswB847MAGuOzAHLjswBU47MADeOzACrjswAq47MADeOzAFPjswBv47MAGuOzAHzjswAGAAAAAAAAAAAAAAAA47MABuOzAHDjswBM47MAHuOzAGTjswBn47MAZ+OzAGDjswAc47MATeOzAHHjswAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA47MAKuOzAHTjswBq47MAaOOzAGjjswBq47MAdOOzADAAAAAAAAAAAAAAAAAAAAAAAA8AAAADAAAAAQAAAAEAAAAAAAAAAP//AwAAAAOAAAABgIghAAAAAAAAAAAAAP//gAEAAIABAADAA4wc8A8AAA==" type="image/x-icon">
+    <title>Pro-krasnodar</title>
+  <script type="module" crossorigin src="<?php bloginfo('template_url'); ?>/assets/index-009f6abf.js"></script>
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/index-22eae3ab.css">
+  <?php wp_head(); ?>
+</head>
+<body>
