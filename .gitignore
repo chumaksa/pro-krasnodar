@@ -103,3 +103,5 @@ fabric.properties
 /.idea/pro-krasnodar.iml
 /.idea/vcs.xml
 /.idea/watcherTasks.xml
+
+/dist
